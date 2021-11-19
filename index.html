@@ -5,10 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="lessons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/7080cd0a09.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Extra Classes</title>
 </head>
-<body>
-    
+<body> 
+    <div id="app">
+        <main>
+            <button v-on:click='showCheckout'>
+                {{cartItemCount}}
+                <span class='fas fa-shopping-cart'></span>
+                Check Out
+            </button>
+            <br>
+            <br>
+            <div v-if='showProduct'>
+                <h1 v-text="sitename"></h1>
+                <img v-bind:src="product.image"
+                v-bind:width= 'product.imageWidth'>
+                <h2>{{product.title}} </h2>
+                <p>{{product.location}}</p>
+                <p>Number of Spaces: {{product.NoOfSpaces}}</p>
+                <p>price: {{product.price}} </p>
+                <button v-on:click="addToCart" v-bind:disabled='!canAddToCart'>Add to cart</button>
+            </main>
+        </div>
+    </div>
+    <div v-else>
+
+    </div>
+    <script type="text/javascript"> 
+      //Vue Object creation
+        var webstore = new Vue(
+        {
+            el: '#app',
+            data: {
+                sitename: "After School Club",
+                showProduct: true,
+                product:{
+                    id: 1001,
+                    title: "Math" ,
+                    location: "London" ,
+                    price: 100,
+                    NoOfSpaces: 5,
+                    image: "Photos/maths.png",
+                 imageWidth: 200, //making the image expand
+                 availableInventory: 5
+        },
+
+        cart: [],
+
+    },
+
+    methods: {
+        //Adds Product to carts and decreases NoOfSpaces by 1
+        addToCart: function () {
+            this.cart.push(this.product.id);
+            this.product.NoOfSpaces--      
+            },
+
+         //Toggle visibility of the of product once checked-out
+           showCheckout() {
+            this.showProduct = this.showProduct ? 
+            false : true
+            }
+        },
+        computed: {
+            //returns length of the cart items
+            cartItemCount: function() {
+                return this.cart.length
+            },
+
+            //checks if cartItems is < availableInventory
+            canAddToCart: function() {
+                return this.product.availableInventory > this.cartItemCount;
+            }
+
+        }
+
+    }
+    );
+</script>
 </body>
 </html>
+
+
+
+
+
+    
