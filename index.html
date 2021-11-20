@@ -13,8 +13,8 @@
 <body>
 <div id="app" class="container" style="margin-top: 10%;">
 <header></header>
-<a style="float: right;" href="#" v-if='cartItemCount === "" '  hidden>Cart</a>
-    <a style="float: right;" href="#" @click="showCheckout()" v-else > <span class="fas fa-cart-plus"></span> Cart ({{cartItemCount}})</a>
+    <a id="cartBTN" href="#" v-if='cartItemCount === "" '  hidden>Cart</a>
+    <a id="cartBTN2" href="#" @click="showCheckout()" v-else > <span class="fas fa-cart-plus"></span> Cart ({{cartItemCount}})</a>
     
 
 </header>
@@ -73,7 +73,6 @@
     <div v-else>
         <h1  v-text="ShopCart"></h1>
         
-        <center>
             <h2>Checkout Now</h2>
             <br>
             <form>
@@ -88,7 +87,6 @@
                 
                 <input style="margin-bottom: 50px;" @click="submitForm(customer)" v-else class="btn btn-primary" type="submit" value="Place Order"> 
             </form>
-            </center>
     <br><br><br>
 
         <div class="column" >
