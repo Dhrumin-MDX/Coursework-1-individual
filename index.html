@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="https://kit.fontawesome.com/7080cd0a09.js" crossorigin="anonymous"></script>
-    <script src="subjects.js" ></script>
-
-
-  
+    <script src="lessons.js" ></script>
     
 </head>
 <body>
@@ -22,7 +19,7 @@
 
 </header>
     
-    <div v-if='showProducts'>
+    <div v-if='showLessons'>
 
         <h1 class="text-center" v-text="sitename"></h1>
 
@@ -31,9 +28,6 @@
 
         <aside>
             
-
-
-
   <p><b>Sort Order</b></p>
   <input type="radio" id="ascending" name="sort_order" v-model="sort.sortingOrder" value="ascending">
   <label for="ascending">Ascending</label><br>
@@ -124,7 +118,7 @@
         var vm = new Vue ({
             el: "#app",
             data:{
-                showProducts: true,
+                showLessons: true,
                 sitename: 'Extra Classes Booking',
                 ShopCart: 'Your Shopping Cart',
 
@@ -166,8 +160,8 @@
                 },
 
                 showCheckout: function(){
-                    console.log(this.showProducts);
-                    this.showProducts = this.showProducts ? false : true;
+                    console.log(this.showLessons);
+                    this.showLessons = this.showLessons ? false : true;
                 },
 
                 submitForm(customer) {

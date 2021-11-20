@@ -1,4 +1,3 @@
-//Vue Object creation
 let lessons = [
 
     {
@@ -6,7 +5,7 @@ let lessons = [
         subject: "Math" ,
         location: "Luton" ,
         price: 100,
-        image: "image/maths.png", 
+        image: "Photos/maths.png", 
         availableInventory: 5
         
     },
@@ -16,7 +15,7 @@ let lessons = [
         subject: "English" ,
         location: "Bath" ,
         price: 80,
-        image: "image/english.jpg",
+        image: "Photos/english.jpg",
         availableInventory: 5
         
     },
@@ -26,7 +25,7 @@ let lessons = [
         subject: "Music" ,
         location: "Yorkshire" ,
         price: 100,
-        image: "image/Music.png", 
+        image: "Photos/Music.png", 
         availableInventory: 5
         
     },
@@ -36,7 +35,7 @@ let lessons = [
         subject: "Law" ,
         location: "Manchester" ,
         price: 200,
-        image: "image/Law.jpg", 
+        image: "Photos/Law.jpg", 
  	availableInventory: 5
         
     },
@@ -46,7 +45,7 @@ let lessons = [
         subject: "History" ,
         location: "Watford" ,
         price: 100,
-        image: "image/History.jpg", 
+        image: "Photos/History.jpg", 
         availableInventory: 5
         
     },
@@ -56,7 +55,7 @@ let lessons = [
         subject: "Craft" ,
         location: "Briton" ,
         price: 75,
-        image: "image/Craft.jpg", 
+        image: "Photos/Craft.jpg", 
         availableInventory: 5
         
     },
@@ -66,7 +65,7 @@ let lessons = [
         subject: "Economics" ,
         location: "Northamton" ,
         price: 150,
-        image: "image/Economics.jpg", 
+        image: "Photos/Economics.jpg", 
         availableInventory: 5
         
     },
@@ -76,7 +75,7 @@ let lessons = [
         subject: "Biology" ,
         location: "Liverpool" ,
         price: 300,
-        image: "image/Biology.jpg", 
+        image: "Photos/Biology.jpg", 
         availableInventory: 5
         
     },
@@ -86,7 +85,7 @@ let lessons = [
         subject: "Physical Education",
         location: "Leicester" ,
         price: 100,
-        image: "image/PE.jpg", 
+        image: "Photos/PE.jpg", 
         availableInventory: 5
         
     },
@@ -96,7 +95,7 @@ let lessons = [
         subject: "Foreign Language",
         location: "Nottingham" ,
         price: 200,
-        image: "image/FL.jpg", 
+        image: "Photos/FL.jpg", 
         availableInventory: 5
         
     },
